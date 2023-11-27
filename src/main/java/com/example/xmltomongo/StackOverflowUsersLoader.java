@@ -20,10 +20,10 @@ public class StackOverflowUsersLoader {
             JAXBContext jaxbContext = JAXBContext.newInstance(Users.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-            // Reading data from the XML file and converting it into Java objects
+
             Users users = (Users) jaxbUnmarshaller.unmarshal(file);
 
-            // Connecting to MongoDB
+
             String connectionString = "mongodb://localhost:27017"; // Replace with your MongoDB connection string
 
             try {
